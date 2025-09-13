@@ -1,0 +1,68 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.o
+*.lo
+*.la
+*.al
+*.pyc
+*.pyo
+*.swp
+*.swo
+*.bak
+*.orig
+*.rej
+
+# Dependency directories
+node_modules/
+vendor/
+target/
+build/
+dist/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+*.classpath
+*.project
+.settings/
+
+# Log files
+*.log
+
+# Temporary files
+*~
+#*#
+.#*
+*.tmp
+*.temp
+
+# Configuration files (sensitive or local)
+.env
+config.local.php
+*.key
+*.pem
+
+# Specific to certain languages/frameworks
+# Python
+__pycache__/
+
+# Java
+*.jar
+*.war
+*.ear
+
+# C#
+bin/
+obj/
+
+# Ruby
+.bundle/
+
+# Go
+*.exe
