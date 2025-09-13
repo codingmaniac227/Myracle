@@ -3,6 +3,7 @@ import helmet from "helmet";
 import cors from "cors";
 import morgan from "morgan";
 import dotenv from "dotenv";
+import productRoutes from "./routes/productRoutes.js";
 
 dotenv.config();
 const app = express()
@@ -20,10 +21,7 @@ app.use(morgan("dev")); // Log request to the console
 const PORT = process.env.PORT;
 
 
-app.get('/test', (req, res) => {
-    console.log(res.getHeaders())
-    res.send('Hello from the test route!');
-})
+app.use('/api/products', productRoutes)
 
 
 app.listen(PORT, () => {
