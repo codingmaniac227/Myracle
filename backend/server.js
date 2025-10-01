@@ -61,10 +61,10 @@ if (process.env.NODE_ENV === "production") {
     // server our react app
     app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
-    app.get("*", (req, res) => {
-        res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
-    });
-}
+    app.get('/*splat', (req, res, next) => {
+        if (req.path.startsWith('/api/')) return next()
+        res.sendFile(path.join(distDir, 'index.html'))
+    })
 
 async function initDB() {
     try {
